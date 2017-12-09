@@ -1,0 +1,122 @@
+// main: ../style.less
+
+.portfolio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: @m-sm) {
+    padding: 100px 80px;
+  }
+
+  @media (min-width: @m-md) {
+    padding: 100px 150px;
+  }
+
+  .content {
+    max-width: 800px;
+
+    h3 {
+      margin: 0 0 30px;
+      .schwing();
+    }
+  }
+
+  .portfolio-items {
+    font-size: 16px;
+
+    @media (min-width: @m-sm) {
+      font-size: 18px;
+    }
+
+    @media (min-width: @m-md) {
+      font-size: 20px;
+    }
+
+    @media (min-width: @m-lg) {
+      font-size: 22px;
+    }
+
+    article {
+      display: flex;
+      overflow: hidden;
+
+      .image {
+        position: relative;
+        overflow: hidden;
+        min-width: 30%;
+        float: left;
+        padding-bottom: 30%;
+        margin-right: 30px;
+        border-radius: 4px;
+        background-size: cover;
+
+        &:hover {
+          &:after {
+            border-color: fade(@primary, 50%);
+          }
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          border-radius: inherit;
+          border: 1px solid fade(#000, 25%);
+          transition: all .25s;
+        }
+      }
+
+      .text {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+
+        a {
+          &:hover {
+            color: @primary;
+            text-decoration: none;
+          }
+        }
+
+        h4 {
+          font-size: 120%;
+          margin-top: 0;
+          margin-bottom: 15px;
+        }
+
+        p {
+          margin: 0;
+          font-weight: 300;
+          line-height: 1.5;
+        }
+      }
+
+    }
+  }
+
+  .portfolio-subtext {
+    margin-top: 25px;
+    margin-bottom: 0;
+    padding: 25px 0;
+    font-size: 20px;
+    opacity: .65;
+    transition: all .25s;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    a {
+      color: @primary;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

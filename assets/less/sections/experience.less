@@ -1,0 +1,90 @@
+// main: ../style.less
+
+.experience {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: @m-sm) {
+    padding: 100px 80px;
+  }
+
+  @media (min-width: @m-md) {
+    padding: 100px 150px;
+  }
+
+  @media (min-width: @m-lg) {
+    padding: 100px 15px;
+  }
+
+  .content {
+    max-width: 1200px;
+
+    h3 {
+      margin: 0 0 30px;
+      .schwing();
+    }
+
+    .row {
+      @media (min-width: @m-lg) {
+        display: flex;
+        margin: 0 -40px;
+      }
+
+      .col {
+        transition: all .25s;
+        color: lighten(@gray, 10%);
+
+        @media (min-width: @m-lg) {
+          flex: 1 1 0;
+          margin: 0 40px;
+        }
+
+        h4 {
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+          margin: 0 0 15px;
+          padding-bottom: 5px;
+          border-bottom: 2px solid fade(@gray, 20%);
+          font-weight: 300;
+          transition: all .25s;
+
+          strong {
+            font-weight: 500;
+          }
+
+          span {
+            opacity: .75;
+          }
+        }
+
+        p {
+          font-size: 18px;
+          line-height: 1.5;
+
+          @media (min-width: @m-sm) {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+
+    .even-more {
+      margin: 40px 0 0;
+      color: #6d6d6d;
+      font-size: 16px;
+      line-height: 1.4;
+
+      @media (min-width: @m-sm) {
+        font-size: 20px;
+      }
+
+      strong {
+        display: block;
+        margin-bottom: 5px;
+        letter-spacing: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Erik Fransson - Front-end developer</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    <link href="assets/css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    <nav>
+      <a href="#intro">Top</a>
+      <a href="#experience">Experience</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="intro" id="intro">
+      <div class="content">
+        <p class="hello">Hello</p>
+        <h1>My name is Erik Fransson and I'm a swedish front-end developer.</h1>
+        <h2>I love working with HTML/CSS/JS to create beautiful interfaces.</h2>
+        <p class="read-more">See more:</p>
+        <div class="buttons">
+          <a href="#experience" class="btn" data-hover="Experience"><span>Experience</span></a>
+          <a href="#portfolio" class="btn" data-hover="Portfolio"><span>Portfolio</span></a>
+          <a href="#contact" class="btn" data-hover="Contact"><span>Contact</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience" id="experience">
+      <div class="content">
+        <h3>Experience</h3>
+
+        <div class="row">
+          <div class="col">
+            <h4><strong>TopBorn</strong> <span>2013 - 2017</a></h4>
+            <p>At TopBorn I was mostly building Wordpress sites and sometimes creating the mockups for those sites using Photoshop. I also did quite a bit of sysadmin work such as server administration and network administration.</p>
+          </div>
+
+          <div class="col">
+            <h4><strong>ClickSys</strong> <span>2017 - Current</span></h4>
+            <p>At ClickSys I work with building interfaces for the various products. I get mockups from our designers which I then turn to life through AngularJS and back-end API's that my other colleagues built.</p>
+          </div>
+        </div>
+
+        <p class="even-more">
+          <strong>Some technologies I've picked up during my career:</strong>
+          HTML, PHP, <br>
+          CSS, SCSS, LESS, <br>
+          JS, jQuery, AngularJS, <br>
+          Grunt, Gulp, npm, Bower, <br>
+          Nginx, Apache, <br>
+          WordPress, Concrete
+        </p>
+      </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+      <div class="content">
+        <h3>Portfolio</h3>
+
+        <div class="portfolio-items">
+          <article>
+            <a href="http://listbuilder.erikfransson.io" target="_blank" class="image" style="background-image: url('assets/img/listbuilder.png')"></a>
+            <div class="text">
+              <h4><a href="http://listbuilder.erikfransson.io" target="_blank">Listbuilder <i class="icon ion-link"></i></a></h4>
+              <p>A listbuilder I created after I got bored building army lists for table top games with spreadsheets. It is built with AngularJS and uses localstorage to store data in the users browser.</p>
+            </div>
+          </article>
+        </div>
+
+        <p class="portfolio-subtext">You can find more of my work if you check out my <a href="https://codepen.io/erik514/" target="_blank">codepen</a> and <a href="https://github.com/pntbutter" target="_blank">github</a>.</p>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <a href="mailto:frallanawsm@gmail.com" data-hover="frallanawsm@gmail.com"><i class="icon ion-email"></i></a>
+      <a href="https://codepen.io/erik514/" data-hover="Codepen" target="_blank"><i class="icon ion-social-codepen"></i></a>
+      <a href="https://github.com/pntbutter" data-hover="Github" target="_blank"><i class="icon ion-social-github"></i></a>
+      <a href="https://www.linkedin.com/in/erik-fransson-ba44a982/" data-hover="LinkedIn" target="_blank"><i class="icon ion-social-linkedin"></i></a>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="assets/js/prefixfree.min.js"></script>
+    <script>
+      $(document).on('click', 'a[href^="#"]', function (event) {
+        event.preventDefault();
+
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 500);
+      });
+    </script>
+
+  </body>
+</html>
